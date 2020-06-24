@@ -1,0 +1,22 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: rgb(224, 17, 17);
+  }
+  
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xxx-large;
+
+}
+.centeredcap{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
