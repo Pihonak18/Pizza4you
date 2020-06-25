@@ -16,30 +16,89 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title>Pizzas 4 You!</title>
   </head>
 
-  <body>
-    <header >
-        <div class ="container">
-        <img src=Pics/Pizza3.png style="width: 100%;"></img>
-        <h1 class="centered">Pizzas 4 You!</h1>
-        <p class="centeredcap">Get The Taste of New Haven. 
+    <!-- <div class="header">
+      <div class="collapse" id="navbar">
+          <! <button class="text-white h4">Collapsed content</button> -->
+          <!-- <select>
+            <option value="Pizza">Pizza</option>
+            <option value="Toppings">Toppings</option>
+          </select>
         </div>
-     
-      
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-       <!-- Timeblocks go here -->
-
-
-
-       
+        <div>
+          <select>
+          <option value="Contact">Contact</option>
+        </select>
       </div>
-      <script src="code.js">
+      <div>
+        <select>
+        <option value="Ratings">Ratings</option>
+      </select>
+      </div>
+    </div> --> 
+  
 
-      </script>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Pizza4you</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Pizza</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Ratings</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        <div class ="container-fluid" id="pizza">
+        <img src=Pics/eatingpizza.png style="width: 100%;"></img>
+        <!-- <h1 class="centered">Pizzas 4 You!</h1>
+        <p class="centeredcap">Get The Taste of New Haven.  -->
+        </div>
+        
+        <div class ="container" id="titleTopThree">
+        <!-- <span class="border"></span> -->
+          <p>Top 3 sellers!</p>
+        </div>
+
+        <div class="container" id="topThree">
+          <div class="row justify-content-between">
+          
+          <span class=" border border-primary col-sm">
+          pizza 1
+          </span>
+          <span class="border border-primary col-sm">
+          pizza 2
+          </span>
+          <span class="border border-primary col-sm">
+          pizza 3
+          </span>
+          </div>
+        </div>
+
+
+        <footer>
+          <p></p>
+          <p><a href="www.newhavenpizzas4you.com">www.newhavenpizzas4you.com</a></p>
+        </footer>
+
+        <script src="code.js"></script>
   </body>
+
+  
 </html>
