@@ -16,30 +16,125 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
+
     <title>Pizzas 4 You!</title>
   </head>
 
   <body>
-    <header >
-        <div class ="container">
-        <img src=Pics/Pizza3.png style="width: 100%;"></img>
-        <h1 class="centered">Pizzas 4 You!</h1>
-        <p class="centeredcap">Get The Taste of New Haven. 
-        </div>
-     
-      
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-       <!-- Timeblocks go here -->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="Pics/pizzalogo.jpg"
+          width="50"
+          height="50"
+          class="d-inline-block align-center"
+          alt="logo"
+          loading="lazy"
+        />
+        Pizzas4you</a
+      >
 
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-
-       
+      <div class="collapse navbar-collapse w-100" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Pizza 4 you.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="pizza.html">Pizza Map</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="ratings.html">Ratings</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-      <script src="code.js">
+    </nav>
 
-      </script>
+    <!-- main pizza picture container -->
+
+    <!-- <div class="container" id="pizzaPics"> -->
+    <div id="pizzaPics" class="container">
+      <div class="row">
+        <div class="col-6 col-md-6 d-inline p-2">
+          <img
+            src="Pics/meat-pizza.jpg"
+            alt="meat"
+            style="width: 100%;"
+            class="rounded img-fluid"
+          />
+        </div>
+        <div class="col-6 col-md-6 d-inline p-2">
+          <img
+            src="Pics/clam-pie.jpg"
+            alt="clam"
+            style="width: 100%;"
+            class="rounded img-fluid"
+          />
+        </div>
+        <div class="col-12 col-md-12 d-inline p-2">
+          <img
+            src="Pics/BarPizzaCrust.jpg"
+            alt="bar"
+            style="width: 100%;"
+            class="rounded img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- <h1 class="centered">Pizzas 4 You!</h1>
+        <p class="centeredcap">Get The Taste of New Haven. -->
+
+    <!-- top 3 title bar -->
+    <div class="container" id="titleTopThree">
+      <!-- <span class="border"></span> -->
+      <p>Top 3 sellers!</p>
+    </div>
+
+    <!-- top 3 containers (can make a button and or with images)-->
+    <div class="container" id="topThree">
+      <div class="row justify-content-between">
+        <span class="border border-primary col-sm">
+          pizza 1
+        </span>
+        <span class="border border-primary col-sm">
+          pizza 2
+        </span>
+        <span class="border border-primary col-sm">
+          pizza 3
+        </span>
+      </div>
+    </div>
+
+    <footer>
+      <p></p>
+      <p><a href="www.newhavenpizzas4you.com">www.newhavenpizzas4you.com</a></p>
+    </footer>
+
+    <script src="code.js"></script>
   </body>
 </html>
