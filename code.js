@@ -12,16 +12,21 @@ $(document).ready(function () {
     var name = $("<h5></h5>");
     name.text(pizzaPlaces[i]);
     var emptyPizza = $("<img src='emptyslice.jpg'/>");
-    $("<img src='emptyslice.jpg'/>").addClass("#plainPizza");
+    emptyPizza.attr("srcb", "colorepizza.jpg");
+    emptyPizza.addClass("plainPizza");
     emptyPizza.css({ height: "4em", width: "4em" });
     $("#names").append(name, emptyPizza, rate);
     var rate = $("#filledPizza");
-    rate.hide();
   }
 
   function changeImage() {
-    $("#plainPizza").click(function () {
-      $("#filledPizza").attr("src", "colorepizza.jpg");
+    $(".plainPizza").click(function () {
+      console.log(this);
+      var src = $(this).attr("src");
+      var srcb = $(this).attr("srcb");
+
+      $(this).attr("src", srcb);
+      $(this).attr("srcb", src);
     });
   }
 
