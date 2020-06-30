@@ -15,15 +15,13 @@ $(document).ready(function () {
     $("<img src='emptyslice.jpg'/>").addClass("#plainPizza");
     emptyPizza.css({ height: "4em", width: "4em" });
     $("#names").append(name, emptyPizza, rate);
-    var rate = $("<img src='colorepizza.jpg'/>");
-    $("<img src='colorepizza.jpg'/>").addClass("#filledPizza");
+    var rate = $("#filledPizza");
     rate.hide();
   }
 
   function changeImage() {
     $("#plainPizza").click(function () {
-      $("#filledPizza").show();
-      rating++;
+      $("#filledPizza").attr("src", "colorepizza.jpg");
     });
   }
 
