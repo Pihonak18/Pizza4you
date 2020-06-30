@@ -12,6 +12,12 @@ $(document).ready(function () {
     var name = $("<h5></h5>");
     name.text(pizzaPlaces[i]);
     var emptyPizza = $("<img src='emptyslice.jpg'/>");
+    /*we are telling var emptyPizza that is has this photo
+    and then we are just changing the attr/photo in its place when clicked.
+    so this eliminated using the hide jquery option we are able to store both 
+    images in one variable
+    *
+    */
     emptyPizza.attr("srcb", "colorepizza.jpg");
     emptyPizza.addClass("plainPizza");
     emptyPizza.css({ height: "4em", width: "4em" });
@@ -24,14 +30,17 @@ $(document).ready(function () {
       console.log(this);
       var src = $(this).attr("src");
       var srcb = $(this).attr("srcb");
+      /*
+here is the function that says when this src is clicked, 
+then change it to the srcb which is the second pizza slice photo
+ */
 
       $(this).attr("src", srcb);
       $(this).attr("srcb", src);
     });
   }
 
-  //can't get the function to work yet for when the empty slice is clicked it'll change
-  //to the colored slice and local storage will count the # of ratings.
+  //
 
   changeImage();
   console.log(rating);
