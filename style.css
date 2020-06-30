@@ -1,17 +1,15 @@
 /*Nav bar to make it right side of the page*/
 
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
 }
 
 li {
   float: right;
-  border-right:1px solid #bbb;
+  border-right: 1px solid #bbb;
 }
 
 li:last-child {
@@ -32,14 +30,12 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #ffffff;
-  
 }
 /*Nav bar end*/
 
 .navbar {
   font-weight: bolder;
   font-size: 25px;
-  
 }
 .navbar-brand {
   font-size: 35px;
@@ -77,6 +73,11 @@ footer {
   text-align: center;
 }
 
+/* pizza-map page  */
+#pizza-map * {
+  height: 700px;
+  /* width: 900px; */
+}
 
 /*Starting of contact page*/
 div {
