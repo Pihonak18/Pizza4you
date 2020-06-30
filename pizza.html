@@ -76,7 +76,7 @@
     <!-- pizza tab container -->
     <div class="container" id="titleTopThree">
       <!-- <span class="border"></span> -->
-      <p>Best selling pizzas aroung you!</p>
+      <p>Best selling pizzas around you!</p>
     </div>
     <!--- Table to display multiple pizza placess in user location --->
     <div class="container" id="topThree">
@@ -96,8 +96,54 @@
       </div>
     </div>
 
-    <!---Footer  -->>
-    <footer class="footer">
+    <!-- container for map -->
+   
+        <!---<style>
+          #map{
+            height: 425px;
+            width: 50%;
+            padding-left: 5%;
+            margin-left: 25%;
+          }
+          h1 {
+            margin-left: 35%;
+          }
+        </style> -->
+        
+      </head>
+      <body>
+        <h1>New Haven Pizza Map</h1>
+          <div id="map"></div>
+        <script>
+          function initMap(){
+            var options = {
+              zoom: 14,
+              center: {lat: 41.3083, lng: -72.9279}
+            }
+            var map = new google.maps.Map(document.getElementById('map'), options);
+            addMarker({lat: 41.302907, lng: -72.916933});
+            addMarker({lat: 41.3139, lng: -72.9130});
+            addMarker({lat: 41.3061, lng: -72.9304});
+            addMarker({lat: 41.3031, lng: -72.9201});
+            addMarker({lat: 41.3134, lng: -72.9134});
+            function addMarker(coords) {
+              var marker = new google.maps.Marker({
+              position: coords,
+              map: map,
+              icon:'Pics/pizzaria.png'
+            });
+            }
+            
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqqvguqbWfCuei7qvJav5LnimzAbj48cY&callback=initMap">
+      </script>
+      </body>
+ 
+
+    <!---Footer  -->
+    <footer>
       <p></p>
       <p><a href="www.newhavenpizzas4you.com">www.newhavenpizzas4you.com</a></p>
     </footer>
