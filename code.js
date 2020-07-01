@@ -2,6 +2,8 @@ $(document).ready(function () {
   var pizzaPlaces = ["Modern", "Da legnas", "Sally's", "Bar", "PePe's"];
   var rating = 0;
 
+  localStorage.setItem(pizzaPlaces, rating);
+
   for (var i = 0; i < pizzaPlaces.length; i++) {
     /*this loop will be to set the ratings at each pizza place
   *wraps around all of the vars and appending the names & images
@@ -22,12 +24,14 @@ $(document).ready(function () {
     emptyPizza.addClass("plainPizza");
     emptyPizza.css({ height: "4em", width: "4em" });
     $("#names").append(name, emptyPizza, rate);
-    var rate = $("#filledPizza");
+    var rate = $(".filledPizza");
   }
 
   function changeImage() {
     $(".plainPizza").click(function () {
       console.log(this);
+      rating++;
+      console.log(rating);
       var src = $(this).attr("src");
       var srcb = $(this).attr("srcb");
       /*
@@ -39,11 +43,15 @@ then change it to the srcb which is the second pizza slice photo
       $(this).attr("srcb", src);
     });
   }
+  $(".plainpizza").val(localStorage.getItem("rating"));
 
-  //
+  /*now what i would like to do is maybe add multiple pizza photos and list #'s 1-5? and then when
+  someone selects a # like how much they'd like to rate that place it will change that many pizzas
+
+  still need to get local storage to count the # of "ratings"
+  */
 
   changeImage();
-  console.log(rating);
 });
 
 //document.ready funtion for jquery
