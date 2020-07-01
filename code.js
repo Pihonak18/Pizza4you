@@ -13,18 +13,27 @@ $(document).ready(function () {
 
     var name = $("<h5></h5>");
     name.text(pizzaPlaces[i]);
-    var emptyPizza = $("<img src='emptyslice.jpg'/>");
+    // var emptyPizza = $("<img src='emptyslice.jpg'/>");
     /*we are telling var emptyPizza that is has this photo
     and then we are just changing the attr/photo in its place when clicked.
     so this eliminated using the hide jquery option we are able to store both 
     images in one variable
     *
     */
-    emptyPizza.attr("srcb", "colorepizza.jpg");
-    emptyPizza.addClass("plainPizza");
-    emptyPizza.css({ height: "4em", width: "4em" });
-    $("#names").append(name, emptyPizza, rate);
-    var rate = $(".filledPizza");
+    // emptyPizza.attr("srcb", "colorepizza.jpg");
+    // emptyPizza.addClass("plainPizza");
+    // emptyPizza.css({ height: "4em", width: "4em" });
+    // var rate = $(".filledPizza");
+    $("#names").append(name);
+
+    for (var j = 0; j < 10; j++) {
+      var emptyPizza = $("<img src='emptyslice.jpg'/>");
+      emptyPizza.attr("srcb", "colorepizza.jpg");
+      emptyPizza.addClass("plainPizza");
+      emptyPizza.css({ height: "4em", width: "4em" });
+      var rate = $(".filledPizza");
+      $("#names").append(emptyPizza);
+    }
   }
 
   function changeImage() {
@@ -34,6 +43,7 @@ $(document).ready(function () {
       console.log(rating);
       var src = $(this).attr("src");
       var srcb = $(this).attr("srcb");
+
       /*
 here is the function that says when this src is clicked, 
 then change it to the srcb which is the second pizza slice photo
@@ -43,7 +53,7 @@ then change it to the srcb which is the second pizza slice photo
       $(this).attr("srcb", src);
     });
   }
-  $(".plainpizza").val(localStorage.getItem("rating"));
+  $(".plainpizza").val(localStorage.getItem(rating));
 
   /*now what i would like to do is maybe add multiple pizza photos and list #'s 1-5? and then when
   someone selects a # like how much they'd like to rate that place it will change that many pizzas
