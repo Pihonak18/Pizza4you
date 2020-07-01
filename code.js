@@ -1,12 +1,19 @@
 $(document).ready(function () {
   var pizzaPlaces = ["Modern", "Da legnas", "Sally's", "Bar", "PePe's"];
-  var rating = 0;
-  if (changeImage) {
-    rating++;
-  } else {
-  }
+  var rating = {
+    one: "1",
+    two: "2",
+    three: "3",
+    four: "4",
+    five: "5",
+    six: "6",
+    seven: "7",
+    eight: "8",
+    nine: "9",
+    ten: "10",
+  };
 
-  localStorage.setItem("ratings", JSON.stringify(rating));
+  localStorage.setItem("saveRatings", JSON.stringify(rating));
 
   for (var i = 0; i < pizzaPlaces.length; i++) {
     /*this loop will be to set the ratings at each pizza place
@@ -24,10 +31,6 @@ $(document).ready(function () {
     images in one variable
     *
     */
-    // emptyPizza.attr("srcb", "colorepizza.jpg");
-    // emptyPizza.addClass("plainPizza");
-    // emptyPizza.css({ height: "4em", width: "4em" });
-    // var rate = $(".filledPizza");
     $("#names").append(name);
 
     for (var j = 0; j < 10; j++) {
@@ -57,7 +60,7 @@ then change it to the srcb which is the second pizza slice photo
       $(this).attr("srcb", src);
     });
   }
-  JSON.parse(localStorage.getItem("rating"));
+  JSON.parse(localStorage.getItem("saveRatings"));
 
   /*now what i would like to do is maybe add multiple pizza photos and list #'s 1-5? and then when
   someone selects a # like how much they'd like to rate that place it will change that many pizzas
