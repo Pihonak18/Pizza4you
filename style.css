@@ -1,0 +1,128 @@
+/*Nav bar to make it right side of the page*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: green;
+}
+
+.active {
+  background-color: #ffffff;
+}
+/*Nav bar end*/
+
+.navbar {
+  font-weight: bolder;
+  font-size: 25px;
+}
+.navbar-brand {
+  font-size: 35px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: rgb(224, 17, 17);
+}
+
+/* .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: xxx-large;
+}
+.centeredcap {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+} */
+#titleTopThree {
+  text-align: center;
+  font-size: 2.8em;
+  background-color: green;
+  margin-top: 50px;
+}
+#topThree {
+  padding: 20px;
+}
+footer {
+  text-align: center;
+}
+
+/* pizza-map page  */
+#pizza-map * {
+  height: 700px;
+  /* width: 900px; */
+}
+
+/*Starting of contact page*/
+div {
+  border-bottom-width: 2px;
+
+  padding-right: 20px;
+}
+#myContact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 40%;
+  margin-top: 20px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+/* end of Contact page*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
