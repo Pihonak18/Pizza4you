@@ -1,3 +1,4 @@
+
 /*Nav bar to make it right side of the page*/
 
 ul {
@@ -63,7 +64,7 @@ footer {
 #pizza-map * {
   height: 700px;
   /* width: 900px; */
-}
+} 
 #map{
   height: 425px;
   width: 50%;
