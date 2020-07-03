@@ -1,19 +1,6 @@
 $(document).ready(function () {
+  console.log(JSON.parse(localStorage.getItem("saveRatings")));
   var pizzaPlaces = ["Modern", "Da legnas", "Sally's", "Bar", "PePe's"];
-  var rating = {
-    one: "1",
-    two: "2",
-    three: "3",
-    four: "4",
-    five: "5",
-    six: "6",
-    seven: "7",
-    eight: "8",
-    nine: "9",
-    ten: "10",
-  };
-
-  localStorage.setItem("saveRatings", JSON.stringify(rating));
 
   for (var i = 0; i < pizzaPlaces.length; i++) {
     /*this loop will be to set the ratings at each pizza place
@@ -33,34 +20,46 @@ $(document).ready(function () {
     */
     $("#names").append(name);
 
+    var btn = $("<button></button>");
+    btn.attr("type", "submit");
+    btn.attr("value", "Submit");
+    btn.attr("class", "btn btn-success");
+    var input1 = $("<input>");
+    input1.attr("type", "text");
+    input1.attr("placeholder", "Leave a Comment about " + pizzaPlaces[i]);
+    input1.attr("comment", "commentLeft");
+    input1.attr("class", "usercomment");
+
+    $(".btn-success").append(input1);
+
     for (var j = 0; j < 10; j++) {
-      var emptyPizza = $("<img src='emptyslice.jpg'/>");
+      var random = j + 1;
+      var emptyPizza = $("<img id='" + random + "' src='emptyslice.jpg'/>");
       emptyPizza.attr("srcb", "colorepizza.jpg");
       emptyPizza.addClass("plainPizza");
       emptyPizza.css({ height: "4em", width: "4em" });
       var rate = $(".filledPizza");
-      $("#names").append(emptyPizza);
+      $("#names").append(emptyPizza, input1);
     }
   }
 
   function changeImage() {
     $(".plainPizza").click(function () {
       console.log(this);
-
-      console.log(rating);
+      var thisClass = $(this).attr("id");
+      console.log(thisClass);
+      // console.log(rating);
       var src = $(this).attr("src");
       var srcb = $(this).attr("srcb");
-
+      localStorage.setItem("saveRatings", JSON.stringify(thisClass));
       /*
 here is the function that says when this src is clicked, 
 then change it to the srcb which is the second pizza slice photo
  */
-
       $(this).attr("src", srcb);
       $(this).attr("srcb", src);
     });
   }
-  JSON.parse(localStorage.getItem("saveRatings"));
 
   /*now what i would like to do is maybe add multiple pizza photos and list #'s 1-5? and then when
   someone selects a # like how much they'd like to rate that place it will change that many pizzas
