@@ -19,18 +19,17 @@ $(document).ready(function () {
     *
     */
     $("#names").append(name);
-
-    var btn = $("<button></button>");
-    btn.attr("type", "submit");
-    btn.attr("value", "Submit");
-    btn.attr("class", "btn btn-success");
+    var div = $(
+      "<div><button type='button' class='btn btn-success'> " +
+        "Submit" +
+        " </button></div>"
+    );
+    div.addClass("submitBtn");
     var input1 = $("<input>");
     input1.attr("type", "text");
     input1.attr("placeholder", "Leave a Comment about " + pizzaPlaces[i]);
     input1.attr("comment", "commentLeft");
     input1.attr("class", "usercomment");
-
-    $(".btn-success").append(input1);
 
     for (var j = 0; j < 10; j++) {
       var random = j + 1;
@@ -39,7 +38,7 @@ $(document).ready(function () {
       emptyPizza.addClass("plainPizza");
       emptyPizza.css({ height: "4em", width: "4em" });
       var rate = $(".filledPizza");
-      $("#names").append(emptyPizza, input1);
+      $("#names").append(emptyPizza, input1, div);
     }
   }
 
