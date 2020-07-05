@@ -1,6 +1,6 @@
 $(document).ready(function () {
   console.log(JSON.parse(localStorage.getItem("saveRatings")));
-  var pizzaPlaces = ["Modern", "Da legnas", "Sally's", "Bar", "PePe's"];
+  var pizzaPlaces = ["Modern", "Sally's", "PePe's", "Da legnas", "Bar"];
 
   for (var i = 0; i < pizzaPlaces.length; i++) {
     /*this loop will be to set the ratings at each pizza place
@@ -30,10 +30,12 @@ $(document).ready(function () {
     input1.attr("placeholder", "Leave a Comment about " + pizzaPlaces[i]);
     input1.attr("comment", "commentLeft");
     input1.attr("class", "usercomment");
-    console.llog(input1);
+    console.log(input1);
 
     function comment() {
-      $(".submitBtn").click(function () {});
+      $(".submitBtn").click(function () {
+        $(".usercomment");
+      });
     }
     for (var j = 0; j < 10; j++) {
       var random = j + 1;
