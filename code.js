@@ -1,6 +1,6 @@
 $(document).ready(function () {
   console.log(JSON.parse(localStorage.getItem("saveRatings")));
-  var pizzaPlaces = ["Modern", "Sally's", "PePe's", "Da legnas", "Bar"];
+  var pizzaPlaces = ["Modern", "Da legnas", "Sally's", "Bar", "PePe's"];
 
   for (var i = 0; i < pizzaPlaces.length; i++) {
     /*this loop will be to set the ratings at each pizza place
@@ -20,9 +20,9 @@ $(document).ready(function () {
     */
     $("#names").append(name);
     var div = $(
-      "<div><input type='button' class='btn btn-success'> " +
+      "<div><button type='button' class='btn btn-success'> " +
         "Submit" +
-        " </input></div>"
+        " </button></div>"
     );
     div.addClass("submitBtn");
     var input1 = $("<input>");
