@@ -20,9 +20,9 @@ $(document).ready(function () {
     */
     $("#names").append(name);
     var div = $(
-      "<div><button type='button' class='btn btn-success'> " +
+      "<div><form><button type='button' class='btn btn-success'> " +
         "Submit" +
-        " </button></div>"
+        " </button></form></div>"
     );
     div.addClass("submitBtn");
     var input1 = $("<input>");
@@ -32,11 +32,9 @@ $(document).ready(function () {
     input1.attr("class", "usercomment");
     console.llog(input1);
 
-    // function comment() {
-    //   $(".submitBtn").click(function () {
-
-    //   });
-    // }
+    function comment() {
+      $(".submitBtn").click(function () {});
+    }
     for (var j = 0; j < 10; j++) {
       var random = j + 1;
       var emptyPizza = $("<img id='" + random + "' src='emptyslice.jpg'/>");
