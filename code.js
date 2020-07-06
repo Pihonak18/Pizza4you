@@ -1,5 +1,7 @@
 $(document).ready(function () {
   console.log(JSON.parse(localStorage.getItem("saveRatings")));
+  console.log(localStorage.getItem("userinput"));
+
   var pizzaPlaces = ["Modern", "Sally's", "PePe's", "Da legnas", "Bar"];
 
   for (var i = 0; i < pizzaPlaces.length; i++) {
@@ -18,25 +20,60 @@ $(document).ready(function () {
     images in one variable
     *
     */
+    var btnName = "btn" + i;
+    var classname = "input" + i;
     $("#names").append(name);
-    var div = $(
-      "<div><form><button type='button' class='btn btn-success'> " +
+    var form = $(
+      "<form><input class='" +
+        classname +
+        "'  type='text'><button type='button' class='btn btn-success " +
+        btnName +
+        "'> " +
         "Submit" +
-        " </button></form></div>"
+        " </button></div>"
     );
-    div.addClass("submitBtn");
-    var input1 = $("<input>");
-    input1.attr("type", "text");
-    input1.attr("placeholder", "Leave a Comment about " + pizzaPlaces[i]);
-    input1.attr("comment", "commentLeft");
-    input1.attr("class", "usercomment");
-    console.log(input1);
 
-    function comment() {
-      $(".submitBtn").click(function () {
-        $(".usercomment");
+    $(".btn0")
+      .unbind()
+      .click(function () {
+        var comment = $(".input0").val();
+        console.log(comment);
+
+        localStorage.setItem("userinput", JSON.stringify(comment));
       });
-    }
+    $(".btn1")
+      .unbind()
+      .click(function () {
+        var comment = $(".input1").val();
+        console.log(comment);
+
+        localStorage.setItem("userinput", JSON.stringify(comment));
+      });
+    $(".btn2")
+      .unbind()
+      .click(function () {
+        var comment = $(".input2").val();
+        console.log(comment);
+
+        localStorage.setItem("userinput", JSON.stringify(comment));
+      });
+    $(".btn3")
+      .unbind()
+      .click(function () {
+        var comment = $(".input3").val();
+        console.log(comment);
+
+        localStorage.setItem("userinput", JSON.stringify(comment));
+      });
+    $(".btn4")
+      .unbind()
+      .click(function () {
+        var comment = $(".input4").val();
+        console.log(comment);
+
+        localStorage.setItem("userinput", JSON.stringify(comment));
+      });
+
     for (var j = 0; j < 10; j++) {
       var random = j + 1;
       var emptyPizza = $("<img id='" + random + "' src='emptyslice.jpg'/>");
@@ -44,7 +81,7 @@ $(document).ready(function () {
       emptyPizza.addClass("plainPizza");
       emptyPizza.css({ height: "4em", width: "4em" });
       var rate = $(".filledPizza");
-      $("#names").append(emptyPizza, input1, div);
+      $("#names").append(emptyPizza, form);
     }
   }
 
@@ -57,6 +94,7 @@ $(document).ready(function () {
       var src = $(this).attr("src");
       var srcb = $(this).attr("srcb");
       localStorage.setItem("saveRatings", JSON.stringify(thisClass));
+
       /*
 here is the function that says when this src is clicked, 
 then change it to the srcb which is the second pizza slice photo
