@@ -7,8 +7,10 @@ The BEST pizza! Hew Haven style! An interactive website for pizza lovers, colleg
 
 # User story:
 
-User is Pizza lovers
-Goal to find the best place to have pizzas
+User is Pizza lovers,
+
+Goal to find the best place to have pizzas,
+
 Benefit is to find restaurant information
 
 As a web owner I want to display my application page in four tabs, so that the users can follow the instructions easily.
@@ -38,7 +40,10 @@ We used the Google Maps API for the pizza map page so you are able to click on t
 
 # Rough breakdown of tasks:
 
-CSS-Aimee
-API-Anthony
-HTML-Mathew
+CSS-Aimee,
+
+API-Anthony,
+
+HTML-Mathew,
+
 Function-Molly
